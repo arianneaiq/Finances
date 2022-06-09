@@ -15,13 +15,14 @@ namespace Finances
         Wallet myWallet;
         Wallet anotherWallet;
 
+       
         public Form1()
         {
             InitializeComponent();
 
             myWallet = new Wallet();
             anotherWallet = new Wallet();
-
+            
         }
 
         //Wallet 1
@@ -39,12 +40,36 @@ namespace Finances
 
         private void btnAddMoney_Click(object sender, EventArgs e)
         {
-            myWallet.AddMoney(Convert.ToInt32(tbAddMoney.Text));
+            int Addmoney = Convert.ToInt32(tbAddMoney.Text);
+            if (Addmoney < 0)
+            {
+                lbWithdrawInfo.Text = myWallet.addNegativeAmmount(); 
+            }
+            else  {
+                myWallet.AddMoney(Addmoney);
+            }
+          
         }
 
-        private void btnWithdrawMoney_Click(object sender, EventArgs e)
+       private void btnWithdraw1to2_Click(object sender, EventArgs e)
         {
-            myWallet.WithdrawMoney(Convert.ToInt32(tbWithdrawMoney.Text));
+            int withdrawAmount = Convert.ToInt32(tbWithdrawAmount.Text);
+
+            if (withdrawAmount < 0)
+            {
+                lbWithdrawInfo.Text = myWallet.negativeAmount();
+            }
+            else if (withdrawAmount >= myWallet.GetOwnerAmmount())
+            {
+                lbWithdrawInfo.Text = myWallet.notEnoughAmount();
+            }
+            else
+            {
+                lbWithdrawInfo.Text = myWallet.withdrawSucess();
+                myWallet.WithdrawMoney(withdrawAmount);
+                anotherWallet.AddMoney(withdrawAmount);
+            }
+           
         }
 
         //Wallet 2
@@ -62,18 +87,40 @@ namespace Finances
         }
 
         private void btnAddMoney2_Click(object sender, EventArgs e)
-        {
-            anotherWallet.AddMoney(Convert.ToInt32(tbAddMoney2.Text));
+        { 
+            int Addmoney = Convert.ToInt32(tbAddMoney.Text);
+            if (Addmoney < 0)
+            {
+                lbWithdrawInfo2.Text = anotherWallet.addNegativeAmmount();
+            }
+            else
+            {
+                anotherWallet.AddMoney(Addmoney);
+            }
         }
 
-        private void btnWithdrawMoney2_Click(object sender, EventArgs e)
-        {
-            anotherWallet.WithdrawMoney(Convert.ToInt32(tbWithdrawMoney2.Text));
-        }
+        
 
-        private void groupBox3_Enter(object sender, EventArgs e)
+        private void btnWithdraw2to1_Click(object sender, EventArgs e)
         {
 
+            int withdrawAmount = Convert.ToInt32(tbWithdrawAmount.Text);
+
+            if (withdrawAmount < 0)
+            {
+                lbWithdrawInfo2.Text = anotherWallet.negativeAmount();
+            }
+            else if (withdrawAmount >= anotherWallet.GetOwnerAmmount())
+            {
+                lbWithdrawInfo2.Text = anotherWallet.notEnoughAmount();
+            }
+            else
+            {
+                lbWithdrawInfo2.Text = myWallet.withdrawSucess();
+                myWallet.AddMoney(withdrawAmount);
+                anotherWallet.WithdrawMoney(withdrawAmount);
+            }
+           
         }
     }
 }

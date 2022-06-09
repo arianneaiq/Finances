@@ -38,9 +38,7 @@
             this.tbAddMoney = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.tbWithdrawMoney = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnWithdrawMoney = new System.Windows.Forms.Button();
             this.tbSetName2 = new System.Windows.Forms.TextBox();
             this.btnAddMoney2 = new System.Windows.Forms.Button();
             this.btnSetOwnerName2 = new System.Windows.Forms.Button();
@@ -50,11 +48,15 @@
             this.btnShowInfo2 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.tbWithdrawMoney2 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.btnWithdrawMoney2 = new System.Windows.Forms.Button();
             this.tbAddMoney2 = new System.Windows.Forms.TextBox();
+            this.btnWithdraw1to2 = new System.Windows.Forms.Button();
+            this.btnWithdraw2to1 = new System.Windows.Forms.Button();
+            this.tbWithdrawAmount = new System.Windows.Forms.TextBox();
+            this.lbWithdrawInfo = new System.Windows.Forms.Label();
+            this.lbWithdrawInfo2 = new System.Windows.Forms.Label();
+            this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -143,10 +145,11 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.groupBox1.Controls.Add(this.lbWithdrawInfo);
             this.groupBox1.ForeColor = System.Drawing.Color.Black;
             this.groupBox1.Location = new System.Drawing.Point(42, 21);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(413, 115);
+            this.groupBox1.Size = new System.Drawing.Size(413, 125);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
@@ -154,45 +157,24 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.groupBox2.Controls.Add(this.tbWithdrawMoney);
-            this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Controls.Add(this.btnWithdrawMoney);
             this.groupBox2.Controls.Add(this.tbAddMoney);
             this.groupBox2.Location = new System.Drawing.Point(42, 152);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(413, 235);
+            this.groupBox2.Size = new System.Drawing.Size(413, 172);
             this.groupBox2.TabIndex = 9;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "groupBox2";
             // 
-            // tbWithdrawMoney
-            // 
-            this.tbWithdrawMoney.Location = new System.Drawing.Point(348, 188);
-            this.tbWithdrawMoney.Name = "tbWithdrawMoney";
-            this.tbWithdrawMoney.Size = new System.Drawing.Size(59, 23);
-            this.tbWithdrawMoney.TabIndex = 11;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(194, 188);
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(461, 219);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(158, 21);
+            this.label1.Size = new System.Drawing.Size(121, 15);
             this.label1.TabIndex = 10;
             this.label1.Text = "amount to withdraw: ";
-            // 
-            // btnWithdrawMoney
-            // 
-            this.btnWithdrawMoney.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnWithdrawMoney.Location = new System.Drawing.Point(9, 176);
-            this.btnWithdrawMoney.Name = "btnWithdrawMoney";
-            this.btnWithdrawMoney.Size = new System.Drawing.Size(156, 44);
-            this.btnWithdrawMoney.TabIndex = 10;
-            this.btnWithdrawMoney.Text = "Withdraw money";
-            this.btnWithdrawMoney.UseVisualStyleBackColor = true;
-            this.btnWithdrawMoney.Click += new System.EventHandler(this.btnWithdrawMoney_Click);
             // 
             // tbSetName2
             // 
@@ -272,57 +254,25 @@
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.groupBox3.Controls.Add(this.lbWithdrawInfo2);
             this.groupBox3.ForeColor = System.Drawing.Color.Black;
             this.groupBox3.Location = new System.Drawing.Point(588, 21);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(413, 115);
+            this.groupBox3.Size = new System.Drawing.Size(413, 125);
             this.groupBox3.TabIndex = 17;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "groupBox3";
-            this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
             // 
             // groupBox4
             // 
             this.groupBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.groupBox4.Controls.Add(this.tbWithdrawMoney2);
-            this.groupBox4.Controls.Add(this.label6);
-            this.groupBox4.Controls.Add(this.btnWithdrawMoney2);
             this.groupBox4.Controls.Add(this.tbAddMoney2);
             this.groupBox4.Location = new System.Drawing.Point(588, 152);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(413, 235);
+            this.groupBox4.Size = new System.Drawing.Size(413, 172);
             this.groupBox4.TabIndex = 18;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "groupBox4";
-            // 
-            // tbWithdrawMoney2
-            // 
-            this.tbWithdrawMoney2.Location = new System.Drawing.Point(348, 188);
-            this.tbWithdrawMoney2.Name = "tbWithdrawMoney2";
-            this.tbWithdrawMoney2.Size = new System.Drawing.Size(59, 23);
-            this.tbWithdrawMoney2.TabIndex = 11;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(194, 188);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(158, 21);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "amount to withdraw: ";
-            // 
-            // btnWithdrawMoney2
-            // 
-            this.btnWithdrawMoney2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnWithdrawMoney2.Location = new System.Drawing.Point(9, 176);
-            this.btnWithdrawMoney2.Name = "btnWithdrawMoney2";
-            this.btnWithdrawMoney2.Size = new System.Drawing.Size(156, 44);
-            this.btnWithdrawMoney2.TabIndex = 10;
-            this.btnWithdrawMoney2.Text = "Withdraw money";
-            this.btnWithdrawMoney2.UseVisualStyleBackColor = true;
-            this.btnWithdrawMoney2.Click += new System.EventHandler(this.btnWithdrawMoney2_Click);
             // 
             // tbAddMoney2
             // 
@@ -331,11 +281,58 @@
             this.tbAddMoney2.Size = new System.Drawing.Size(59, 23);
             this.tbAddMoney2.TabIndex = 7;
             // 
+            // btnWithdraw1to2
+            // 
+            this.btnWithdraw1to2.Location = new System.Drawing.Point(492, 176);
+            this.btnWithdraw1to2.Name = "btnWithdraw1to2";
+            this.btnWithdraw1to2.Size = new System.Drawing.Size(62, 40);
+            this.btnWithdraw1to2.TabIndex = 19;
+            this.btnWithdraw1to2.Text = ">>";
+            this.btnWithdraw1to2.UseVisualStyleBackColor = true;
+            this.btnWithdraw1to2.Click += new System.EventHandler(this.btnWithdraw1to2_Click);
+            // 
+            // btnWithdraw2to1
+            // 
+            this.btnWithdraw2to1.Location = new System.Drawing.Point(492, 267);
+            this.btnWithdraw2to1.Name = "btnWithdraw2to1";
+            this.btnWithdraw2to1.Size = new System.Drawing.Size(62, 39);
+            this.btnWithdraw2to1.TabIndex = 20;
+            this.btnWithdraw2to1.Text = "<<";
+            this.btnWithdraw2to1.UseVisualStyleBackColor = true;
+            this.btnWithdraw2to1.Click += new System.EventHandler(this.btnWithdraw2to1_Click);
+            // 
+            // tbWithdrawAmount
+            // 
+            this.tbWithdrawAmount.Location = new System.Drawing.Point(492, 237);
+            this.tbWithdrawAmount.Name = "tbWithdrawAmount";
+            this.tbWithdrawAmount.Size = new System.Drawing.Size(62, 23);
+            this.tbWithdrawAmount.TabIndex = 12;
+            // 
+            // lbWithdrawInfo
+            // 
+            this.lbWithdrawInfo.AutoSize = true;
+            this.lbWithdrawInfo.Location = new System.Drawing.Point(32, 100);
+            this.lbWithdrawInfo.Name = "lbWithdrawInfo";
+            this.lbWithdrawInfo.Size = new System.Drawing.Size(0, 15);
+            this.lbWithdrawInfo.TabIndex = 0;
+            // 
+            // lbWithdrawInfo2
+            // 
+            this.lbWithdrawInfo2.AutoSize = true;
+            this.lbWithdrawInfo2.Location = new System.Drawing.Point(9, 100);
+            this.lbWithdrawInfo2.Name = "lbWithdrawInfo2";
+            this.lbWithdrawInfo2.Size = new System.Drawing.Size(0, 15);
+            this.lbWithdrawInfo2.TabIndex = 0;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1039, 408);
+            this.ClientSize = new System.Drawing.Size(1039, 358);
+            this.Controls.Add(this.tbWithdrawAmount);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnWithdraw2to1);
+            this.Controls.Add(this.btnWithdraw1to2);
             this.Controls.Add(this.tbSetName2);
             this.Controls.Add(this.btnAddMoney2);
             this.Controls.Add(this.btnSetOwnerName2);
@@ -356,8 +353,12 @@
             this.Controls.Add(this.groupBox2);
             this.Name = "Form1";
             this.Text = "a";
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
@@ -378,8 +379,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnWithdrawMoney;
-        private System.Windows.Forms.TextBox tbWithdrawMoney;
         private System.Windows.Forms.TextBox tbSetName2;
         private System.Windows.Forms.Button btnAddMoney2;
         private System.Windows.Forms.Button btnSetOwnerName2;
@@ -389,9 +388,11 @@
         private System.Windows.Forms.Button btnShowInfo2;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.TextBox tbWithdrawMoney2;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button btnWithdrawMoney2;
         private System.Windows.Forms.TextBox tbAddMoney2;
+        private System.Windows.Forms.Button btnWithdraw1to2;
+        private System.Windows.Forms.Button btnWithdraw2to1;
+        private System.Windows.Forms.TextBox tbWithdrawAmount;
+        private System.Windows.Forms.Label lbWithdrawInfo;
+        private System.Windows.Forms.Label lbWithdrawInfo2;
     }
 }
