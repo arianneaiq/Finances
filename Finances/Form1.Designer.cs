@@ -41,7 +41,21 @@
             this.tbWithdrawMoney = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnWithdrawMoney = new System.Windows.Forms.Button();
+            this.tbSetName2 = new System.Windows.Forms.TextBox();
+            this.btnAddMoney2 = new System.Windows.Forms.Button();
+            this.btnSetOwnerName2 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lbOwnerAmountInfo2 = new System.Windows.Forms.Label();
+            this.lbOwnerNameInfo2 = new System.Windows.Forms.Label();
+            this.btnShowInfo2 = new System.Windows.Forms.Button();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.tbWithdrawMoney2 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.btnWithdrawMoney2 = new System.Windows.Forms.Button();
+            this.tbAddMoney2 = new System.Windows.Forms.TextBox();
             this.groupBox2.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnShowInfo
@@ -132,7 +146,7 @@
             this.groupBox1.ForeColor = System.Drawing.Color.Black;
             this.groupBox1.Location = new System.Drawing.Point(42, 21);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(384, 115);
+            this.groupBox1.Size = new System.Drawing.Size(413, 115);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
@@ -180,11 +194,157 @@
             this.btnWithdrawMoney.UseVisualStyleBackColor = true;
             this.btnWithdrawMoney.Click += new System.EventHandler(this.btnWithdrawMoney_Click);
             // 
+            // tbSetName2
+            // 
+            this.tbSetName2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tbSetName2.Location = new System.Drawing.Point(782, 187);
+            this.tbSetName2.Name = "tbSetName2";
+            this.tbSetName2.Size = new System.Drawing.Size(180, 29);
+            this.tbSetName2.TabIndex = 16;
+            // 
+            // btnAddMoney2
+            // 
+            this.btnAddMoney2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnAddMoney2.Location = new System.Drawing.Point(597, 253);
+            this.btnAddMoney2.Name = "btnAddMoney2";
+            this.btnAddMoney2.Size = new System.Drawing.Size(156, 44);
+            this.btnAddMoney2.TabIndex = 14;
+            this.btnAddMoney2.Text = "Add money ";
+            this.btnAddMoney2.UseVisualStyleBackColor = true;
+            this.btnAddMoney2.Click += new System.EventHandler(this.btnAddMoney2_Click);
+            // 
+            // btnSetOwnerName2
+            // 
+            this.btnSetOwnerName2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnSetOwnerName2.Location = new System.Drawing.Point(597, 176);
+            this.btnSetOwnerName2.Margin = new System.Windows.Forms.Padding(0);
+            this.btnSetOwnerName2.Name = "btnSetOwnerName2";
+            this.btnSetOwnerName2.Size = new System.Drawing.Size(156, 48);
+            this.btnSetOwnerName2.TabIndex = 13;
+            this.btnSetOwnerName2.Text = "Set owner\'s name";
+            this.btnSetOwnerName2.UseVisualStyleBackColor = true;
+            this.btnSetOwnerName2.Click += new System.EventHandler(this.btnSetOwnerName2_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(782, 265);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(115, 21);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "amount to add:";
+            // 
+            // lbOwnerAmountInfo2
+            // 
+            this.lbOwnerAmountInfo2.AutoSize = true;
+            this.lbOwnerAmountInfo2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.lbOwnerAmountInfo2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbOwnerAmountInfo2.Location = new System.Drawing.Point(753, 89);
+            this.lbOwnerAmountInfo2.Name = "lbOwnerAmountInfo2";
+            this.lbOwnerAmountInfo2.Size = new System.Drawing.Size(200, 21);
+            this.lbOwnerAmountInfo2.TabIndex = 12;
+            this.lbOwnerAmountInfo2.Text = "Amount of money is ... euro";
+            // 
+            // lbOwnerNameInfo2
+            // 
+            this.lbOwnerNameInfo2.AutoSize = true;
+            this.lbOwnerNameInfo2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.lbOwnerNameInfo2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbOwnerNameInfo2.Location = new System.Drawing.Point(753, 49);
+            this.lbOwnerNameInfo2.Name = "lbOwnerNameInfo2";
+            this.lbOwnerNameInfo2.Size = new System.Drawing.Size(149, 21);
+            this.lbOwnerNameInfo2.TabIndex = 11;
+            this.lbOwnerNameInfo2.Text = "Wallet belongs to .....";
+            // 
+            // btnShowInfo2
+            // 
+            this.btnShowInfo2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnShowInfo2.Location = new System.Drawing.Point(597, 58);
+            this.btnShowInfo2.Name = "btnShowInfo2";
+            this.btnShowInfo2.Size = new System.Drawing.Size(121, 42);
+            this.btnShowInfo2.TabIndex = 10;
+            this.btnShowInfo2.Text = "Show info";
+            this.btnShowInfo2.UseVisualStyleBackColor = true;
+            this.btnShowInfo2.Click += new System.EventHandler(this.btnShowInfo2_Click);
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.groupBox3.ForeColor = System.Drawing.Color.Black;
+            this.groupBox3.Location = new System.Drawing.Point(588, 21);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(413, 115);
+            this.groupBox3.TabIndex = 17;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "groupBox3";
+            this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.groupBox4.Controls.Add(this.tbWithdrawMoney2);
+            this.groupBox4.Controls.Add(this.label6);
+            this.groupBox4.Controls.Add(this.btnWithdrawMoney2);
+            this.groupBox4.Controls.Add(this.tbAddMoney2);
+            this.groupBox4.Location = new System.Drawing.Point(588, 152);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(413, 235);
+            this.groupBox4.TabIndex = 18;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "groupBox4";
+            // 
+            // tbWithdrawMoney2
+            // 
+            this.tbWithdrawMoney2.Location = new System.Drawing.Point(348, 188);
+            this.tbWithdrawMoney2.Name = "tbWithdrawMoney2";
+            this.tbWithdrawMoney2.Size = new System.Drawing.Size(59, 23);
+            this.tbWithdrawMoney2.TabIndex = 11;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label6.Location = new System.Drawing.Point(194, 188);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(158, 21);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "amount to withdraw: ";
+            // 
+            // btnWithdrawMoney2
+            // 
+            this.btnWithdrawMoney2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnWithdrawMoney2.Location = new System.Drawing.Point(9, 176);
+            this.btnWithdrawMoney2.Name = "btnWithdrawMoney2";
+            this.btnWithdrawMoney2.Size = new System.Drawing.Size(156, 44);
+            this.btnWithdrawMoney2.TabIndex = 10;
+            this.btnWithdrawMoney2.Text = "Withdraw money";
+            this.btnWithdrawMoney2.UseVisualStyleBackColor = true;
+            this.btnWithdrawMoney2.Click += new System.EventHandler(this.btnWithdrawMoney2_Click);
+            // 
+            // tbAddMoney2
+            // 
+            this.tbAddMoney2.Location = new System.Drawing.Point(315, 115);
+            this.tbAddMoney2.Name = "tbAddMoney2";
+            this.tbAddMoney2.Size = new System.Drawing.Size(59, 23);
+            this.tbAddMoney2.TabIndex = 7;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(486, 408);
+            this.ClientSize = new System.Drawing.Size(1039, 408);
+            this.Controls.Add(this.tbSetName2);
+            this.Controls.Add(this.btnAddMoney2);
+            this.Controls.Add(this.btnSetOwnerName2);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lbOwnerAmountInfo2);
+            this.Controls.Add(this.lbOwnerNameInfo2);
+            this.Controls.Add(this.btnShowInfo2);
+            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.tbSetName);
             this.Controls.Add(this.btnAddMoney);
             this.Controls.Add(this.btnSetOwnerName);
@@ -198,6 +358,8 @@
             this.Text = "a";
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -218,5 +380,18 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnWithdrawMoney;
         private System.Windows.Forms.TextBox tbWithdrawMoney;
+        private System.Windows.Forms.TextBox tbSetName2;
+        private System.Windows.Forms.Button btnAddMoney2;
+        private System.Windows.Forms.Button btnSetOwnerName2;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbOwnerAmountInfo2;
+        private System.Windows.Forms.Label lbOwnerNameInfo2;
+        private System.Windows.Forms.Button btnShowInfo2;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.TextBox tbWithdrawMoney2;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button btnWithdrawMoney2;
+        private System.Windows.Forms.TextBox tbAddMoney2;
     }
 }
