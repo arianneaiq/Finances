@@ -14,12 +14,7 @@ namespace Finances
             return $"Wallet belongs to {Name}";
         }
 
-        public String GetOwnerAmountToAdd()
-        {
-            return $"Amount of money is {Amount} euro";
-        }
-
-        public String GetOwnerAmountWithdraw()
+        public String GetOwnerAmount()
         {
             return $"Amount of money is {Amount} euro";
         }
@@ -59,8 +54,6 @@ namespace Finances
         {
            Amount += amountOfMoneyToAdd;
         }
-
-        
 
         public void WithdrawMoney(int amountOfMoneyToWithdraw)
         {

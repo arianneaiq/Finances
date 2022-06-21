@@ -29,8 +29,7 @@ namespace Finances
         private void btnShowInfo_Click(object sender, EventArgs e)
         {
             lbOwnerNameInfo.Text = myWallet.GetOwnerName();
-            lbOwnerAmountInfo.Text = myWallet.GetOwnerAmountToAdd();
-            lbOwnerAmountInfo.Text = myWallet.GetOwnerAmountWithdraw();
+            lbOwnerAmountInfo.Text = myWallet.GetOwnerAmount();
         }
 
         private void btnSetOwnerName_Click(object sender, EventArgs e)
@@ -55,7 +54,7 @@ namespace Finances
         {
             int withdrawAmount = Convert.ToInt32(tbWithdrawAmount.Text);
 
-            if (withdrawAmount < 0)
+            if (withdrawAmount <= 0)
             {
                 lbWithdrawInfo.Text = myWallet.negativeAmount();
             }
@@ -68,6 +67,8 @@ namespace Finances
                 lbWithdrawInfo.Text = myWallet.withdrawSucess();
                 myWallet.WithdrawMoney(withdrawAmount);
                 anotherWallet.AddMoney(withdrawAmount);
+                lbOwnerAmountInfo.Text = myWallet.GetOwnerAmount();
+                lbOwnerAmountInfo2.Text = anotherWallet.GetOwnerAmount();
             }
            
         }
@@ -77,8 +78,8 @@ namespace Finances
         private void btnShowInfo2_Click(object sender, EventArgs e)
         {
             lbOwnerNameInfo2.Text = anotherWallet.GetOwnerName();
-            lbOwnerAmountInfo2.Text = anotherWallet.GetOwnerAmountToAdd();
-            lbOwnerAmountInfo2.Text = anotherWallet.GetOwnerAmountWithdraw();
+            lbOwnerAmountInfo2.Text = anotherWallet.GetOwnerAmount();
+  
         }
 
         private void btnSetOwnerName2_Click(object sender, EventArgs e)
@@ -88,14 +89,16 @@ namespace Finances
 
         private void btnAddMoney2_Click(object sender, EventArgs e)
         { 
-            int Addmoney = Convert.ToInt32(tbAddMoney.Text);
-            if (Addmoney < 0)
+            int Addmoney = Convert.ToInt32(tbAddMoney2.Text);
+
+            if (Addmoney <= 0)
             {
                 lbWithdrawInfo2.Text = anotherWallet.addNegativeAmmount();
             }
             else
             {
                 anotherWallet.AddMoney(Addmoney);
+                
             }
         }
 
@@ -106,7 +109,7 @@ namespace Finances
 
             int withdrawAmount = Convert.ToInt32(tbWithdrawAmount.Text);
 
-            if (withdrawAmount < 0)
+            if (withdrawAmount <= 0)
             {
                 lbWithdrawInfo2.Text = anotherWallet.negativeAmount();
             }
@@ -119,6 +122,8 @@ namespace Finances
                 lbWithdrawInfo2.Text = myWallet.withdrawSucess();
                 myWallet.AddMoney(withdrawAmount);
                 anotherWallet.WithdrawMoney(withdrawAmount);
+                lbOwnerAmountInfo.Text = myWallet.GetOwnerAmount();
+                lbOwnerAmountInfo2.Text = anotherWallet.GetOwnerAmount();
             }
            
         }
